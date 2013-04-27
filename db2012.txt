@@ -1,0 +1,29 @@
+1.列出当前目录所有.log文件
+    ls *.log
+2.查找home目录下,所有log文件含有abc字符串的文件
+    find /home -name "*.log" | xargs grep "abc"
+3.查找在系统中最后10分钟访问的文件
+    sudo find / -amin -10
+4.查找在系统中属于FRED这个用户的文件
+    sudo find / -user FRED
+5.一个文件格式如下,写一个脚本统计其所有重复行的行数
+    abc
+    hjg
+    bcd
+    abc
+    bcd
+    kkk
+输出结果示例:
+    2 abc
+    2 bcd
+    1 hjg
+    1 kkk
+    1).sort filename | uniq -c
+    2).5.py
+6.显示输出没有字符"48"所有的行
+    1).grep -v "48" filename
+    2).6.py
+7.去掉一个文件内所有重复的行
+    1).sort filename | uniq 
+    2).7.py
+    3).7.1.py
